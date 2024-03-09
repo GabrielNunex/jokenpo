@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --ff-title: "Kode Mono", monospace;
+    --ff-text: "Roboto", sans-serif;
+    --shadow-text: ;
+    --cl-clear: white;
+    --cl-dark: black;
+    --cl-1: #77e7e4;
+    --cl-2: #e789d3;
+    --cl-3: #fff16f;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.hiddenP {
+    display: none !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+/*Animation Background*/
+
+body {
+    animation: gradient 8s ease alternate infinite;
+    background: linear-gradient(-45deg, var(--cl-1), var(--cl-2), var(--cl-3)) no-repeat;
+    background-size: 300% 300%;
+    cursor: default;
+}
+
+@keyframes gradient {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 100% 50%;
+    } 
+}
+
+/*Hide Front Page*/
+
+.front {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-family: var(--ff-title);
+    font-weight: bold;
+    font-size: 10rem;
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cl-clear);
+    cursor: default;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, .35);
+}
+
+.jo {
+    color: var(--cl-1);
+}
+
+.ken {
+    color: var(--cl-2);
+}
+
+.po {
+    color: var(--cl-3);
+}
+
+/*Title*/
+
+.content {
+    padding: 1rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.title_box {
+    text-align: center;
+}
+
+.title {
+    font-family: var(--ff-title);
+    font-weight: 700;
+    font-size: 4.5rem;
+    color: var(--cl-clear);
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.title2 {
+    font-family: var(--ff-text);
+    font-weight: 700;
+    font-size: 12vw;
+    color: black;
+}
+
+.title_discretion {
+    font-family: var(--ff-title);
+    color: rgba(255, 255, 255, 0.384);
+    font-size: 1.1rem;
+}
+
+/*Cards*/
+
+.cards {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+}
+
+.card_paper, .card_rock, .card_scissor {
+    width: 14vw;
+    height: 21vw;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 2vw;
+    border-radius: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.5); 
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.paper_title, .rock_title, .scissor_title {
+   font-family: var(--ff-text);
+   font-weight: 700;
+   text-transform: uppercase;
+   font-size: 2.5vw;
+}
+
+.paper_title2, .rock_title2, .scissor_title2 {
+    font-family: var(--ff-text);
+    font-weight: 500;
+    text-transform: lowercase;
+    font-size: 2vw;
+}
+
+.card_info {
+    width: 30vw;
+    height: 21vw;
+    padding: 2vw;
+    border-radius: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.5); 
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.text_info {
+    font-family: var(--ff-text);
+    font-size: 1.2rem;
+    text-align: justify;
+    text-indent: 30px;
+    
+}
+
+.textCentered {
+    font-weight: 500;
+    display: block;
+    margin-top: 1vw;
+    text-align: center;
+    text-indent: 0px;
+}
+
+.info_btn {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.btn_options {
+    font-family: var(--ff-text);
+    font-size: 1.3vw;
+    padding: .6vw;
+    border-radius: .5vw;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border: none;
+}
+
+.btn_options:hover, .btn_options:active {
+    font-weight: 700 !important;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    box-shadow: inset 0px 0px 10px 10px rgba(102, 173, 255, 0.25);
+}
+
+/*Rules setings*/
+
+.rules {
+    text-align: center;
+}
+
+.orientation {
+    font-family: var(--ff-title);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1.2vw;
+}
+
+.orientation2 {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+    margin-bottom: 1.2vw;
+}
+
+.rules_btn {
+    padding: .5rem;
+    font-family: var(--ff-text);
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: var(--cl-dark);
+    color: var(--cl-clear);
+    border: none;
+    border-radius: .5rem;
+}
+
+.rules_btn:hover, .rules_btn:active {
+    background-color: var(--cl-clear);
+    color: var(--cl-dark);
+    font-weight: 700 !important;
+    box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+   
+}
+
+.rules_text {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    font-family: var(--ff-text);
+    font-weight: 500;
+    font-size: 1.2rem;
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.486);
+    backdrop-filter: blur(7px)
+}
+
+.rules_text2 {
+    margin: 0 10vw;
+    z-index: 2;
+    padding: 2.5rem;
+    position:relative;
+    text-align: justify;
+    border-radius: 1rem;
+    background: linear-gradient(-45deg, var(--cl-1), var(--cl-2), var(--cl-3)); 
+    backdrop-filter: blur(5px);
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    box-shadow:inset 0px 0px 30px 20px rgba(255, 255, 255, .1), 4px 4px 10px rgba(0, 0, 0, 0.089);
+}
+
+.rules_text3 {
+    font-size: 1rem;
+    color: white;
+    text-align: center !important;
+}
+
+/*rotate imgs*/
+
+.rotate {
+    transform: rotateY(180deg);
+}
+
+
+/*End game*/
+
+.restart {
+    display: flex;
+    gap: 1rem;
+}
+
+.end_msg {
+    font-family: var(--ff-text);
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-top: 1px solid rgba(255, 255, 255, 0.5); 
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.281);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.restart_msg {
+    font-family: var(--ff-text);
+    font-size: 1.8rem;
+    font-weight: 500;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    padding: 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+}
+
+.restart_msg:hover {
+    border-top: 1px solid rgba(255, 255, 255, 0.5); 
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.699);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    color: black;
+    box-sizing: border-box;
+}
+
+/*Responsive*/
+
+@media(max-width: 1025px) {
+    .front {
+        font-size: 20vw;
+    }
+
+    .title{
+        font-size: 18vw;
+    }
+
+    .title_discretion{
+        font-size: 4.5vw;
+    }
+
+    .card_paper, .card_rock, .card_scissor {
+        width: 20vw;
+        height: 30vw;
+        padding: 2vw;
+    }
+
+    .paper_title, .rock_title, .scissor_title {
+        font-size: 4.5vw;
+    }
+     
+     .paper_title2, .rock_title2, .scissor_title2 {
+         font-size: 4vw;
+    }
+
+    .orientation {
+        font-size: 3vw;
+    }
+
+    .orientation2 {
+        font-size: 2.5vw;
+    }
+
+    .rules_btn {
+        font-size: 2.8vw;
+        margin-top: 1vw;
+    }
+
+    .rules_text2 {
+        padding: 5vw;
+        font-size: 4vw;
+    }
+
+    .rules_text3 {
+        font-size: 3.5vw;
+    }
+
+    .card_info {
+        height: 30vw;
+    }
+
+    .hiddenM {
+        font-size: 2vw;
+    }
+
+    .textCentered {
+        font-size: 2vw;
+    }
+
+    .info_btn {
+        gap: 1.5vw;
+    }
+
+    .btn_options {
+        font-size: 1.8vw;
+        padding: 1vw;
+        border-radius: 1.5vw;
+        margin-top: .5vw;
+    }
+
+    .end_msg {
+        font-size: 4vw;
+        padding: .5rem;
+        height: 8vw;
+        display: flex;
+        align-items: center;
+    }
+
+    .restart_msg {
+        font-size: 4vw;
+        padding: .5rem;
+        height: 8vw;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media(max-width: 450px) {
+    .front {
+        font-size: 20vw;
+    }
+
+    .title{
+        font-size: 18vw;
+    }
+
+    .title_discretion{
+        font-size: 4.5vw;
+    }
+
+    .card_paper, .card_rock, .card_scissor {
+        width: 20vw;
+        height: 30vw;
+        padding: 2vw;
+    }
+
+    .paper_title, .rock_title, .scissor_title {
+        font-size: 4.5vw;
+    }
+     
+     .paper_title2, .rock_title2, .scissor_title2 {
+         font-size: 4vw;
+    }
+
+    .orientation {
+        font-size: 3vw;
+    }
+
+    .orientation2 {
+        font-size: 2.5vw;
+    }
+
+    .rules_btn {
+        font-size: 2.8vw;
+        margin-top: 1vw;
+    }
+
+    .rules_text2 {
+        padding: 5vw;
+        font-size: 4vw;
+    }
+
+    .rules_text3 {
+        font-size: 3.5vw;
+    }
+
+    .card_info {
+        height: 30vw;
+    }
+
+    .hiddenM {
+        display: none;
+    }
+
+    .textCentered {
+        font-size: 3vw;
+    }
+
+    .info_btn {
+        gap: 2vw;
+    }
+
+    .btn_options {
+        font-size: 2.6vw;
+        padding: 1vw;
+        border-radius: 1.5vw;
+        margin-top: .5vw;
+    }
+
+    .end_msg {
+        font-size: 4vw;
+        padding: .5rem;
+        height: 8vw;
+        display: flex;
+        align-items: center;
+    }
+
+    .restart_msg {
+        font-size: 4vw;
+        padding: .5rem;
+        height: 8vw;
+        display: flex;
+        align-items: center;
+    }
+}
